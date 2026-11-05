@@ -1,0 +1,394 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px;
+    position: relative;
+    overflow: hidden;
+
+    font-family: 'DM Sans', sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 15%, #d4e2ce, transparent 30%),
+        radial-gradient(circle at 85% 85%, #c6d9c0, transparent 32%),
+        linear-gradient(135deg, #edf2e9, #dce8d8);
+}
+
+/* BACKGROUND CIRCLES */
+.background-decoration {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.decoration-one {
+    width: 280px;
+    height: 280px;
+    top: -90px;
+    right: -70px;
+    background: rgba(126, 157, 119, 0.13);
+    border: 2px solid rgba(126, 157, 119, 0.15);
+}
+
+.decoration-two {
+    width: 350px;
+    height: 350px;
+    bottom: -170px;
+    left: -100px;
+    background: rgba(126, 157, 119, 0.12);
+    border: 2px solid rgba(126, 157, 119, 0.15);
+}
+
+/* FLOATING MATHEMATICAL SYMBOLS */
+.math-symbol {
+    position: fixed;
+    color: #597b59;
+    opacity: 0.24;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    pointer-events: none;
+    animation: float 5s ease-in-out infinite;
+}
+
+.symbol-one {
+    top: 14%;
+    left: 16%;
+    font-size: 90px;
+}
+
+.symbol-two {
+    top: 25%;
+    right: 15%;
+    font-size: 75px;
+    animation-delay: 1s;
+}
+
+.symbol-three {
+    bottom: 18%;
+    left: 18%;
+    font-size: 75px;
+    animation-delay: 2s;
+}
+
+.symbol-four {
+    bottom: 20%;
+    right: 17%;
+    font-size: 65px;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+}
+
+/* CALCULATOR CARD */
+.calculator {
+    width: 390px;
+    max-width: 100%;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+
+    background: linear-gradient(145deg, #ffffff, #f2f6ef);
+
+    border: 1px solid #d6e2d2;
+    border-radius: 30px;
+
+    box-shadow:
+        0 30px 70px rgba(48, 76, 52, 0.17),
+        0 8px 20px rgba(48, 76, 52, 0.07);
+}
+
+/* TOP DECORATIVE LINE */
+.top-line {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 76%;
+    height: 5px;
+
+    border-radius: 0 0 20px 20px;
+
+    background: linear-gradient(
+        90deg,
+        #a9c3a0,
+        #557954,
+        #a9c3a0
+    );
+}
+
+/* HEADER */
+.heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* BOTANICAL LOGO */
+.logo {
+    width: 76px;
+    height: 76px;
+    margin: 3px auto 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(145deg, #e8f0e3, #d7e5d1);
+    border: 1px solid #d3e0ce;
+    border-radius: 25px;
+
+    box-shadow: 0 7px 18px rgba(67, 102, 69, 0.12);
+}
+
+.logo svg {
+    width: 58px;
+    height: 58px;
+}
+
+.small-label {
+    color: #81967c;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #35563b;
+    margin: 7px 0;
+}
+
+.heading p {
+    color: #899a84;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+/* DISPLAY */
+.display {
+    min-height: 125px;
+    padding: 20px;
+    margin-bottom: 23px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+
+    background: linear-gradient(135deg, #e5eee0, #d3e2ce);
+    border: 1px solid #cbdcc5;
+    border-radius: 20px;
+
+    box-shadow:
+        inset 0 3px 12px rgba(49, 75, 51, 0.06),
+        0 5px 12px rgba(49, 75, 51, 0.05);
+}
+
+.display-label {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #82977e;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #668c63;
+    box-shadow: 0 0 7px rgba(102, 140, 99, 0.5);
+}
+
+#previous {
+    min-height: 23px;
+    color: #849781;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+#current {
+    color: #304d36;
+    font-size: 38px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.display-decoration {
+    position: absolute;
+    right: 12px;
+    bottom: 2px;
+    color: rgba(92, 125, 87, 0.12);
+    font-size: 55px;
+    pointer-events: none;
+}
+
+/* BUTTON GRID */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* GENERAL BUTTONS */
+button {
+    height: 62px;
+    border: 1px solid #e0e9dc;
+    border-radius: 17px;
+
+    background: linear-gradient(145deg, #ffffff, #eff4ec);
+    color: #405b43;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 10px rgba(49, 75, 51, 0.07),
+        inset 0 1px 2px rgba(255, 255, 255, 0.9);
+
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(145deg, #e5eee0, #d4e3ce);
+    box-shadow: 0 9px 18px rgba(49, 75, 51, 0.15);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* AC AND DELETE */
+.function {
+    background: linear-gradient(145deg, #e3ecde, #d0dfca);
+    color: #496649;
+    border-color: #cfddc9;
+}
+
+.function:hover {
+    background: #c7d9c0;
+}
+
+/* OPERATORS */
+.operator {
+    background: linear-gradient(145deg, #829b7e, #607e62);
+    color: white;
+    border-color: #607e62;
+    box-shadow: 0 5px 12px rgba(70, 104, 73, 0.2);
+}
+
+.operator:hover {
+    background: linear-gradient(145deg, #91a98c, #6d896c);
+}
+
+/* EQUAL BUTTON */
+.equal {
+    grid-row: span 2;
+    height: auto;
+
+    background: linear-gradient(145deg, #58795c, #304d36);
+    color: white;
+    border: none;
+    font-size: 29px;
+
+    box-shadow: 0 7px 17px rgba(48, 77, 54, 0.24);
+}
+
+.equal:hover {
+    background: linear-gradient(145deg, #6b8c6c, #405f46);
+}
+
+/* ZERO BUTTON */
+.zero {
+    grid-column: span 2;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    text-align: center;
+    color: #899b85;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+
+    margin-top: 24px;
+    padding-top: 16px;
+
+    border-top: 1px solid #e0e9dc;
+}
+
+.footer-leaf {
+    color: #779575;
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    body {
+        padding: 15px;
+        overflow-y: auto;
+    }
+
+    .calculator {
+        padding: 23px;
+        border-radius: 25px;
+    }
+
+    button {
+        height: 56px;
+        font-size: 19px;
+    }
+
+    #current {
+        font-size: 32px;
+    }
+
+    .heading h1 {
+        font-size: 29px;
+    }
+
+    .math-symbol {
+        opacity: 0.12;
+    }
+}
+
+@media (max-height: 650px) {
+    body {
+        align-items: flex-start;
+    }
+}

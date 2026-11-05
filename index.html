@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background decorations -->
+    <div class="background-decoration decoration-one"></div>
+    <div class="background-decoration decoration-two"></div>
+    <div class="math-symbol symbol-one">+</div>
+    <div class="math-symbol symbol-two">×</div>
+    <div class="math-symbol symbol-three">÷</div>
+    <div class="math-symbol symbol-four">%</div>
+
+    <main class="calculator">
+
+        <!-- Top decorative line -->
+        <div class="top-line"></div>
+
+        <!-- Header -->
+        <div class="heading">
+
+            <div class="logo">
+                <!-- Botanical leaf illustration -->
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 83 C49 60 42 39 23 19"
+                          fill="none" stroke="#527451"
+                          stroke-width="3" stroke-linecap="round"/>
+
+                    <path d="M48 65 C20 69 12 47 17 29
+                             C37 31 51 44 48 65Z"
+                          fill="#9DB697"/>
+
+                    <path d="M50 49 C48 22 67 11 85 14
+                             C87 36 72 51 50 49Z"
+                          fill="#6F916D"/>
+
+                    <path d="M49 82 C67 70 76 75 83 91
+                             C65 99 54 94 49 82Z"
+                          fill="#B7CBAF"/>
+
+                    <path d="M26 36 L44 60 M78 22 L53 45 M77 86 L53 83"
+                          fill="none" stroke="#EAF1E6"
+                          stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <span class="small-label">SIMPLE • SMART • BEAUTIFUL</span>
+
+            <h1>Calculator</h1>
+
+            <p>Simple calculations, made easy.</p>
+
+        </div>
+
+        <!-- Display -->
+        <div class="display">
+
+            <div class="display-label">
+                <span class="status-dot"></span>
+                LIVE DISPLAY
+            </div>
+
+            <div id="previous"></div>
+            <div id="current">0</div>
+
+            <div class="display-decoration">✳</div>
+
+        </div>
+
+        <!-- Calculator buttons -->
+        <div class="buttons">
+
+            <button class="function" data-action="clear">AC</button>
+            <button class="function" data-action="delete">DEL</button>
+            <button class="function" data-operator="/">÷</button>
+            <button class="operator" data-operator="*">×</button>
+
+            <button data-number="7">7</button>
+            <button data-number="8">8</button>
+            <button data-number="9">9</button>
+            <button class="operator" data-operator="-">−</button>
+
+            <button data-number="4">4</button>
+            <button data-number="5">5</button>
+            <button data-number="6">6</button>
+            <button class="operator" data-operator="+">+</button>
+
+            <button data-number="1">1</button>
+            <button data-number="2">2</button>
+            <button data-number="3">3</button>
+            <button class="equal" data-action="calculate">=</button>
+
+            <button class="zero" data-number="0">0</button>
+            <button data-action="decimal">.</button>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span class="footer-leaf">✿</span>
+            Designed with HTML, CSS & JavaScript
+            <span class="footer-leaf">✿</span>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
