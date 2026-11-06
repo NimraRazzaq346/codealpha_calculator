@@ -1,5 +1,5 @@
 # 🧮 Modern Calculator
-🚀 **[Live Demo – View Calculator]https://nimrarazzaq346.github.io/codealpha_calculator/)**
+🚀 **[Live Demo – View Calculator](https://nimrarazzaq346.github.io/codealpha_calculator/)**
 A responsive and user-friendly calculator built using **HTML, CSS, and JavaScript**. This project performs basic arithmetic operations with a clean interface, smooth interactions, and a modern design.
 
 ## 📌 Project Overview
